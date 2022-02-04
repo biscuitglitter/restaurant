@@ -33,14 +33,17 @@ function createTabContentDiv() {
   const homediv = document.createElement("div");
   tab.appendChild(homediv);
   homediv.id = "home";
+  homediv.setAttribute("dataset", "data-tab-content")
 
   const menudiv = document.createElement("div");
   tab.appendChild(menudiv);
   menudiv.id = "menu";
+  menudiv.setAttribute("dataset", "data-tab-content")
 
   const contactdiv = document.createElement("div");
   tab.appendChild(contactdiv);
   contactdiv.id = "contact";
+  contactdiv.setAttribute("dataset", "data-tab-content")
 
   return tab, homediv, contactdiv, menudiv
 }

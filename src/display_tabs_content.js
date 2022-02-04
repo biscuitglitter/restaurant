@@ -18,6 +18,7 @@ function restaurantName() {
 
   return restaurantName;
 }
+ 
 
 function displayHomeTab() {
   heroSection();

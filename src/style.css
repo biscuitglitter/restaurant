@@ -23,6 +23,8 @@ body {
   height: 42px;
   width: 1250px;
 }
+
+
  
 li {
   padding-top: 10px;
@@ -42,9 +44,16 @@ li {
   width: 100%;
 }
 
-
 .heroSection {
   background: url("hoteltable.jpg");
   height: 100%;
   width: 100%;
+}
+
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: flex;
 }
