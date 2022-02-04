@@ -1,10 +1,11 @@
 import "./style.css"
 import { createTabContentDiv, displayNavbar } from "./display_navbar";
-import { displayHomeTab } from "./display_tabs_content";
+import { displayHomeTab, displayMenuTab } from "./display_tabs_content";
 
 displayNavbar()
 createTabContentDiv()
 displayHomeTab()
+displayMenuTab()
 
 const tabs = document.querySelectorAll("[data-tab-target]")
 const tabcontent = document.querySelectorAll("[dataset]")
