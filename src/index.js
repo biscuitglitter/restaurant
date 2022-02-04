@@ -1,7 +1,9 @@
 import "./style.css"
-import { component } from "./try";
-import pic from "./pic.jpg";
+import { navbarEl } from "./navbar_module";
+import { fixedText, heroSection } from "./hero_section";
 
-component()
-console.log("hi")
+navbarEl()
+heroSection()
+fixedText()
+
 

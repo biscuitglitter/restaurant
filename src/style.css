@@ -1,5 +1,42 @@
-.bibi {
-    background-color: blue;
-    background: url("./pic.jpg");
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;1,700&display=swap');
 
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: "Arvo", serif;
+  margin: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.navbar {
+  display: flex;
+  gap: 15px;
+  font-size: 14px;
+  height: 30px;
+  width: 1250px;
+}
+ 
+a {
+  padding-top: 5px;
+}
+.heroSection {
+  background: url("hoteltable.jpg");
+  height: 800px;
+  width: 1250px;
+}
+
+.fixedText {
+  font-size: 95px;
+  position: fixed;
+  color: hsl(45, 94%, 53%);
+  bottom: 100px;
+  right: 15px;
 }
