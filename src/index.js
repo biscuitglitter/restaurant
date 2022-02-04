@@ -1,9 +1,9 @@
 import "./style.css"
-import { createTabContent, createNavbar } from "./navbar_module";
-import { displayTabContent } from "./display_tab_content";
+import { createTabContentDiv, displayNavbar } from "./display_navbar";
+import { displayHomeTab } from "./display_tabs_content";
 
-createTabContent()
-createNavbar()
-displayTabContent()
+displayNavbar()
+createTabContentDiv()
+displayHomeTab()
 
 

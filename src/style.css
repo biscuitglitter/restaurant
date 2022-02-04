@@ -29,16 +29,22 @@ li {
   list-style: none;
 }
 
-.heroSection {
-  background: url("hoteltable.jpg");
-  height: 100%;
-  width: 100%;
-}
-
-.fixedText {
+.restaurantName {
   font-size: 95px;
   position: fixed;
   color: hsl(45, 94%, 53%);
   bottom: 100px;
   right: 15px;
+}
+
+.tab-content, #home {
+  height: 100%;
+  width: 100%;
+}
+
+
+.heroSection {
+  background: url("hoteltable.jpg");
+  height: 100%;
+  width: 100%;
 }
