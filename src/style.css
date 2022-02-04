@@ -23,12 +23,16 @@ body {
   height: 42px;
   width: 1250px;
 }
-
-
  
 li {
   padding-top: 10px;
   list-style: none;
+}
+
+li:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: hsl(55, 100%, 50%)
 }
 
 .restaurantName {
@@ -50,10 +54,10 @@ li {
   width: 100%;
 }
 
-[data-tab-content] {
+[dataset] {
   display: none;
 }
 
-.active[data-tab-content] {
+.active {
   display: flex;
 }

@@ -24,7 +24,6 @@ function displayNavbar() {
 
   return navbar, home, menu, contact;
 }
-
 function createTabContentDiv() {
   const tab = document.createElement("div");
   tab.classList.add("tab-content");
@@ -33,6 +32,7 @@ function createTabContentDiv() {
   const homediv = document.createElement("div");
   tab.appendChild(homediv);
   homediv.id = "home";
+  homediv.classList.add("active")
   homediv.setAttribute("dataset", "data-tab-content")
 
   const menudiv = document.createElement("div");
@@ -47,5 +47,6 @@ function createTabContentDiv() {
 
   return tab, homediv, contactdiv, menudiv
 }
+
 
 export { displayNavbar, createTabContentDiv };
