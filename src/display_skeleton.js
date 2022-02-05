@@ -36,7 +36,6 @@ function createContentTabs() {
   homediv.classList.add("home");
   homediv.classList.add("active")
 
-
   const menudiv = document.createElement("div");
   tab.appendChild(menudiv);
   menudiv.classList.add("menu");

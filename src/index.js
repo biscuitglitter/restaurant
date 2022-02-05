@@ -15,11 +15,19 @@ tabs.forEach(tab => {
     const target = document.querySelector(tab.dataset.target)
     tabcontent.forEach(content => {
       content.classList.remove("active")
-      console.log(tabcontent)
     })
     if (target === document.querySelector(".menu")) {
+      document.getElementById("home").style.display = "none"
       document.querySelector(".menu").classList.add("active")
+      document.getElementById("home").classList.remove("active")
+    } else if (target === document.querySelector(".home")) {
+      document.getElementById("home").style.display = ""
+      document.getElementById("home").classList.add("active")
+      document.querySelector(".menu").classList.remove("active")
+    } else if (target === document.querySelector(".contact")) {
+      document.getElementById("home").style.display = "none"
+      document.getElementById("contact").classList.add("active")
     }
   })
 })
-
+ 
