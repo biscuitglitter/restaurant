@@ -28,6 +28,7 @@ tabs.forEach(tab => {
       document.querySelector(".menu").classList.remove("active")
     } else if (target === document.querySelector(".contact")) {
       document.getElementById("home").style.display = "none"
+      document.getElementById("contact").style.display = "";
       document.getElementById("contact").classList.add("active")
     }
   })
