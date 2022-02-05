@@ -77,17 +77,13 @@ function makeMenu() {
   return menuSection
 }
 
-function displayMenuTab() {
-  makeMenu()
-}
-
 function displayHomeTab() {
   heroSection();
   restaurantName();
 }
 
-function displayContactTab() {
-
+function displayMenuTab() {
+  makeMenu()
 }
 
-export { displayHomeTab, displayMenuTab, displayContactTab };
+export { displayHomeTab, displayMenuTab };

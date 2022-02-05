@@ -1,22 +1,20 @@
-function displayNavbar() {
+function createNavbar() {
   const navbar = document.createElement("div");
+
   document.body.appendChild(navbar);
-  console.log(navbar);
+  navbar.classList.add("navbar");
+
   const home = document.createElement("li");
   const menu = document.createElement("li");
   const contact = document.createElement("li");
-
-  navbar.classList.add("navbar");
+  
   navbar.appendChild(home);
-
   navbar.appendChild(menu);
   navbar.appendChild(contact);
-  home.classList.add("home");
-  home.dataset.tabTarget = "#home";
-  menu.classList.add("menu");
-  menu.dataset.tabTarget = "#menu";
-  contact.classList.add("contact");
-  contact.dataset.tabTarget = "#contact";
+
+  home.dataset.target = "#home";
+  menu.dataset.target = "#menu";
+  contact.dataset.target = "#contact";
 
   home.innerText = "HOME";
   menu.innerText = "MENU";
@@ -24,30 +22,39 @@ function displayNavbar() {
 
   return navbar, home, menu, contact;
 }
-function createTabContentDiv() {
+
+
+function createContentTabs() {
   
   const tab = document.createElement("div");
-  tab.classList.add("tab-content");
+  tab.classList.add("tabContent");
   document.body.appendChild(tab);
 
   const homediv = document.createElement("div");
   tab.appendChild(homediv);
   homediv.id = "home";
+  homediv.classList.add("home");
   homediv.classList.add("active")
-  homediv.setAttribute("dataset", "data-tab-content")
+
 
   const menudiv = document.createElement("div");
   tab.appendChild(menudiv);
+  menudiv.classList.add("menu");
   menudiv.id = "menu";
-  menudiv.setAttribute("dataset", "data-tab-content")
+
 
   const contactdiv = document.createElement("div");
   tab.appendChild(contactdiv);
+  contactdiv.classList.add("contact");
   contactdiv.id = "contact";
-  contactdiv.setAttribute("dataset", "data-tab-content")
+
+  homediv.dataset.content = "#homediv";
+  menudiv.dataset.content = "#menudiv";
+  contactdiv.dataset.content = "#contactdiv";
+
 
   return tab, homediv, contactdiv, menudiv
 }
 
 
-export { displayNavbar, createTabContentDiv };
+export { createNavbar, createContentTabs };

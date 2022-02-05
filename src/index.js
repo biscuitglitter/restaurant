@@ -1,34 +1,25 @@
 import "./style.css"
-import { createTabContentDiv, displayNavbar } from "./display_navbar";
-import { displayHomeTab, displayContactTab, displayMenuTab } from "./display_tabs_content";
+import { createNavbar, createContentTabs } from "./display_skeleton";
+import { displayHomeTab, displayMenuTab } from "./display_tabs";
 
-displayNavbar()
-createTabContentDiv()
+createNavbar()
+createContentTabs()
 displayHomeTab()
-displayContactTab()
+displayMenuTab()
 
-const tabs = document.querySelectorAll("[data-tab-target]")
-const tabcontent = document.querySelectorAll("[dataset]")
+const tabs = document.querySelectorAll("[data-target]")
+const tabcontent = document.querySelectorAll("[data-content]")
 
-const menutab = document.querySelector(".menu.active")
-
-if (menutab) {
-  menutab.addEventListener("click", () => {
-    displayMenuTab()
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    const target = document.querySelector(tab.dataset.target)
+    tabcontent.forEach(content => {
+      content.classList.remove("active")
+      console.log(tabcontent)
+    })
+    if (target === document.querySelector(".menu")) {
+      document.querySelector(".menu").classList.add("active")
+    }
   })
-}
-
-tabs.forEach(tab => {    
-    tab.addEventListener("click", () => {
-        const target = document.querySelector(tab.dataset.tabTarget)
-    tabcontent.forEach(tabcontent => {
-        tabcontent.classList.remove("active")
-    })
-    tabs.forEach(tab => {
-      tab.classList.remove("active")
-    })
-    tab.classList.add("active")
-    target.classList.add("active")
-  })    
 })
 
