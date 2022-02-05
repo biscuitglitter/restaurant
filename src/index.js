@@ -1,14 +1,22 @@
 import "./style.css"
 import { createTabContentDiv, displayNavbar } from "./display_navbar";
-import { displayHomeTab, displayMenuTab } from "./display_tabs_content";
+import { displayHomeTab, displayContactTab, displayMenuTab } from "./display_tabs_content";
 
 displayNavbar()
 createTabContentDiv()
 displayHomeTab()
-displayMenuTab()
+displayContactTab()
 
 const tabs = document.querySelectorAll("[data-tab-target]")
 const tabcontent = document.querySelectorAll("[dataset]")
+
+const menutab = document.querySelector(".menu.active")
+
+if (menutab) {
+  menutab.addEventListener("click", () => {
+    displayMenuTab()
+  })
+}
 
 tabs.forEach(tab => {    
     tab.addEventListener("click", () => {
@@ -21,6 +29,6 @@ tabs.forEach(tab => {
     })
     tab.classList.add("active")
     target.classList.add("active")
-  })
-    
+  })    
 })
+

@@ -25,6 +25,7 @@ function displayNavbar() {
   return navbar, home, menu, contact;
 }
 function createTabContentDiv() {
+  
   const tab = document.createElement("div");
   tab.classList.add("tab-content");
   document.body.appendChild(tab);
