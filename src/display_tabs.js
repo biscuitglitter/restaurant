@@ -33,6 +33,7 @@ function makeMenu() {
 
   const starters = document.createElement("h2")
   starters.innerText = "Starters"
+  starters.classList.add("starters")
   menuSection.appendChild(starters)
 
   const textInside1 = document.createElement("h3")
@@ -46,6 +47,7 @@ function makeMenu() {
 
   const mainCourse = document.createElement("h2")
   mainCourse.innerText = "Main Course"
+  mainCourse.classList.add("mainCourse")
   menuSection.appendChild(mainCourse)
 
   const textInside3 = document.createElement("h3")
@@ -59,6 +61,7 @@ function makeMenu() {
 
   const dessert = document.createElement("h2")
   dessert.innerText = "Desserts"
+  dessert.classList.add("dessert")
   menuSection.appendChild(dessert)
   
   const textInside5 = document.createElement("h3")
@@ -77,6 +80,35 @@ function makeMenu() {
   return menuSection
 }
 
+function makeContactTab() {
+
+  const contact = document.getElementById("contact")
+
+  const contactdiv = document.createElement("div")
+  contactdiv.classList.add("contactdiv")
+
+  const text = document.createElement("h1")
+  text.classList.add("text")
+  const aboutUsImg = document.createElement("div")
+  aboutUsImg.classList.add("aboutUsImg")
+  const textInside = document.createElement("p")
+  textInside.classList.add("textInside")
+
+  contact.appendChild(contactdiv)
+  contactdiv.appendChild(text)
+  contactdiv.appendChild(aboutUsImg)
+  contactdiv.appendChild(textInside)
+
+  text.innerText = "About Us"
+  textInside.innerText = "Since our modest beginnings in 2005 with a little space in Toronto’s stylish Yorkville locale, ‘Organization Name’ ‘s development has been enlivened with the energy to cook and serve solid, Indian-roused takeout food."
+
+  return contactdiv
+}
+
+function displayContactTab() {
+  makeContactTab()
+}
+
 function displayHomeTab() {
   heroSection();
   restaurantName();
@@ -86,4 +118,4 @@ function displayMenuTab() {
   makeMenu()
 }
 
-export { displayHomeTab, displayMenuTab };
+export { displayHomeTab, displayMenuTab, displayContactTab };

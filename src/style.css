@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;1,700&display=swap');
-
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@200&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@300&display=swap');
@@ -13,7 +11,6 @@
 html,
 body {
   height: 100%;
-  font-family: "Arvo", serif;
   margin: 20px;
   margin-top: 0;
   margin-bottom: 0;
@@ -60,25 +57,42 @@ li:hover {
 
 h1 {
   font-size: 32px;
-  width: 100px;
-  margin:0;
   padding: 120px;
-  padding-top: 10px;
-  padding-bottom: 0;
+  padding-top: 0;
+  padding-bottom: 30px;
 }
-
 
 h2 {
   font-size: 22px;
-  margin:0;
-  padding: 120px;
-  padding-top: 10px;
-  padding-bottom: 0;
 }
 
 h3 {
 font-size: 16px;
 }
+
+h2, h3, h1 {
+  width: fit-content;
+  margin: 0;
+}
+
+.mainCourse {
+  padding: 100px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
+.starters {
+  padding: 120px;
+  padding-top: 25px;
+  padding-bottom: 30px;
+}
+
+.dessert {
+  padding: 120px;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+
 .menu, .home, .contact {
   display: none;
 }
@@ -87,7 +101,7 @@ font-size: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: 'Source Serif 4', sans-serif;
+  font-family: "Source Serif 4", sans-serif;
   margin: 0;
   padding: 50px;
 }
@@ -98,3 +112,28 @@ font-size: 16px;
   width: 100%;
 }
 
+#contact.contact.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Source Serif 4", sans-serif;
+  margin: 0;
+}
+
+.aboutUsImg {
+  background: url("about.png");
+  height: 467px;
+  width: 700px;
+}
+
+.text {
+  font-size: 19px;
+  margin: 0;
+  padding: 300px;
+  padding-top: 0;
+  padding-bottom: 20px;
+}
+
+.contactdiv {
+  width: 700px;
+}

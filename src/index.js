@@ -1,11 +1,12 @@
 import "./style.css"
 import { createNavbar, createContentTabs } from "./display_skeleton";
-import { displayHomeTab, displayMenuTab } from "./display_tabs";
+import { displayHomeTab, displayMenuTab, displayContactTab } from "./display_tabs";
 
 createNavbar()
 createContentTabs()
 displayHomeTab()
 displayMenuTab()
+displayContactTab()
 
 const tabs = document.querySelectorAll("[data-target]")
 const tabcontent = document.querySelectorAll("[data-content]")
@@ -18,6 +19,7 @@ tabs.forEach(tab => {
     })
     if (target === document.querySelector(".menu")) {
       document.getElementById("home").style.display = "none"
+      document.getElementById("contact").style.display = "none"
       document.querySelector(".menu").classList.add("active")
       document.getElementById("home").classList.remove("active")
     } else if (target === document.querySelector(".home")) {

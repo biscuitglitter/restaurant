@@ -23,7 +23,6 @@ function createNavbar() {
   return navbar, home, menu, contact;
 }
 
-
 function createContentTabs() {
   
   const tab = document.createElement("div");
@@ -50,7 +49,6 @@ function createContentTabs() {
   homediv.dataset.content = "#homediv";
   menudiv.dataset.content = "#menudiv";
   contactdiv.dataset.content = "#contactdiv";
-
 
   return tab, homediv, contactdiv, menudiv
 }
